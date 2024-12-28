@@ -239,30 +239,9 @@
         <img src="comma.png" alt="" class="w-[47px] h-[40px]">
         <p class="open-sans italic font-normal text-[16px] leading-[28px] tracking-[4%] ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit auctor sit .auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque congue ac consequat, aliquam molestie lectus eu. Congue iaculis integer curabitur semper sit.
-
         </p>
 
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
       <p class="pt-[64px] text-[32px] text-[#DCCA87] font-normal leading-[41.6px] tracking-[4%]">
         Kevin Luo
       </p>
@@ -271,12 +250,55 @@
       </p>
       <img src="Kevin Luo.png" alt="" class="pt-[64px] w-[235px]">
 
-
+       
 
 
     </div>
 
   </div>
+
+  <!-- <div class="relative">
+    <video id="video" class="w-full" controls>
+      <source src="meal.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <button id="playButton" class="absolute inset-0 flex items-center justify-center">
+      <img src="play-button.png" alt="Play" class="w-[64px] h-[64px]">
+    </button>
+  </div> -->
+  
+  <div class="relative">
+    <video id="video" class="w-full">
+      <source src="meal.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <button id="playPauseButton" class="absolute inset-0 flex items-center justify-center bg-transparent border-none">
+      <img id="playPauseImage" src="play-button.png" alt="Play" class="w-[64px] h-[64px]">
+    </button>
+  </div>
+<script>
+  const video = document.getElementById('video');
+  const playPauseButton = document.getElementById('playPauseButton');
+  const playPauseImage = document.getElementById('playPauseImage');
+
+  playPauseButton.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+      playPauseImage.src = 'pause-button.png'; // Change to pause image
+    } else {
+      video.pause();
+      playPauseImage.src = 'play-button.png'; // Change to play image
+    }
+  });
+
+  video.addEventListener('play', () => {
+    playPauseImage.src = 'pause-button.png'; // Change to pause image
+  });
+
+  video.addEventListener('pause', () => {
+    playPauseImage.src = 'play-button.png'; // Change to play image
+  });
+</script>
 
   </div>
 
