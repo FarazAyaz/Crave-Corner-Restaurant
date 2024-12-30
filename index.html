@@ -28,19 +28,19 @@
     </div>
     <!-- midsection -->
     <div class="flex gap-[32px] open-sans text-[16px] leading-[28px] tracking-[4%]">
-      <h1 class="hover hover:font-bold hover:border hover:border-1">HOME</h1>
-      <h1 class="hover hover:font-bold hover:border hover:border-1">PAGES</h1>
-      <h1 class="hover hover:font-bold hover:border hover:border-1">CONTACT US</h1>
-      <h1 class="hover hover:font-bold hover:border hover:border-1">BLOG</h1>
-      <h1 class="hover hover:font-bold hover:border hover:border-1">LANDING</h1>
+      <h1 class="hover hover:font-bold hover:border hover:border-1 cursor-pointer">HOME</h1>
+      <h1 class="hover hover:font-bold hover:border hover:border-1 cursor-pointer">PAGES</h1>
+      <h1 class="hover hover:font-bold hover:border hover:border-1 cursor-pointer">CONTACT US</h1>
+      <h1 class="hover hover:font-bold hover:border hover:border-1 cursor-pointer">BLOG</h1>
+      <h1 class="hover hover:font-bold hover:border hover:border-1 cursor-pointer">LANDING</h1>
 
     </div>
     <!-- last -->
     <div class=" open-sans font-semibold text-base leading-[28px] tracking-[5%] flex gap-6">
-      <h1 class="hover hover:font-bold hover:border hover:border-1">Login/Registration</h1>
+      <h1 class="hover hover:font-bold hover:border hover:border-1 cursor-pointer">Login/Registration</h1>
       <div class="border border-1 border-white">
       </div>
-      <h1 class="hover hover:font-bold hover:border hover:border-1">Book Table</h1>
+      <h1 class="hover hover:font-bold hover:border hover:border-1 cursor-pointer">Book Table</h1>
     </div>
   </nav>
   <!-- nav end here -->
@@ -267,40 +267,40 @@
     </button>
   </div> -->
   
-  <div class="relative">
-    <video id="video" class="w-full">
+  <div class="relative w-full h-[700px] mx-auto">
+    <video id="video" class="w-full h-full">
       <source src="meal.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <button id="playPauseButton" class="absolute inset-0 flex items-center justify-center bg-transparent border-none">
-      <img id="playPauseImage" src="play-button.png" alt="Play" class="w-[64px] h-[64px]">
-    </button>
+    <img id="thumbnail" src="Video.png" alt="Video Thumbnail" class="absolute inset-0 w-full h-full cursor-pointer">
   </div>
-<script>
-  const video = document.getElementById('video');
-  const playPauseButton = document.getElementById('playPauseButton');
-  const playPauseImage = document.getElementById('playPauseImage');
-
-  playPauseButton.addEventListener('click', () => {
-    if (video.paused) {
+  
+  <script>
+    const video = document.getElementById('video');
+    const thumbnail = document.getElementById('thumbnail');
+  
+    const playVideo = () => {
       video.play();
-      playPauseImage.src = 'pause-button.png'; // Change to pause image
-    } else {
-      video.pause();
-      playPauseImage.src = 'play-button.png'; // Change to play image
-    }
-  });
-
-  video.addEventListener('play', () => {
-    playPauseImage.src = 'pause-button.png'; // Change to pause image
-  });
-
-  video.addEventListener('pause', () => {
-    playPauseImage.src = 'play-button.png'; // Change to play image
-  });
-</script>
-
-  </div>
+      thumbnail.style.display = 'none'; // Hide the thumbnail
+    };
+  
+    thumbnail.addEventListener('click', () => {
+      if (video.paused) {
+        playVideo();
+      } else {
+        video.pause();
+        thumbnail.style.display = 'block'; // Show the thumbnail
+      }
+    });
+  
+    video.addEventListener('play', () => {
+      thumbnail.style.display = 'none'; // Hide the thumbnail
+    });
+  
+    video.addEventListener('pause', () => {
+      thumbnail.style.display = 'block'; // Show the thumbnail
+    });
+  </script>  
 
 
 </body>
