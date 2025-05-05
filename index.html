@@ -115,99 +115,89 @@
 
   <body class="bg-black text-white">
     <!-- nav starts -->
-    <nav
-      class="flex justify-between items-center px-[120px] py-[32px] relative border-2 max-sm:px-[20px] max-md:px-[40px]"
-    >
-      <!-- logo -->
-      <div class="w-[199px] h-[57px]">
-        <img src="logo.png" alt="" class="w-full h-full" />
-      </div>
-      <!-- midsection -->
-      <div
-        class="nav-menu xl:flex gap-[32px] open-sans text-[16px] leading-[28px] tracking-[4%] hidden"
-      >
-        <h1
-          class="hover hover:font-bold hover:border hover:border-1 cursor-pointer"
-        >
-          HOME
-        </h1>
-        <h1
-          class="hover hover:font-bold hover:border hover:border-1 cursor-pointer"
-        >
-          PAGES
-        </h1>
-        <h1
-          class="hover hover:font-bold hover:border hover:border-1 cursor-pointer"
-        >
-          CONTACT US
-        </h1>
-        <h1
-          class="hover hover:font-bold hover:border hover:border-1 cursor-pointer"
-        >
-          BLOG
-        </h1>
-        <h1
-          class="hover hover:font-bold hover:border hover:border-1 cursor-pointer"
-        >
-          LANDING
-        </h1>
-      </div>
-      <!-- last -->
-      <div
-        class="open-sans font-semibold text-base leading-[28px] tracking-[5%] flex gap-6"
-      >
-        <h1
-          class="hover hover:font-bold hover:border hover:border-1 cursor-pointer"
-        >
-          Login/Registration
-        </h1>
-        <div class="border border-1 border-white"></div>
-        <h1
-          class="hover hover:font-bold hover:border hover:border-1 cursor-pointer"
-        >
-          Book Table
-        </h1>
-      </div>
-    </nav>
+ <!-- Responsive Navbar -->
+<nav class="flex justify-between items-center px-[120px] py-[32px] relative border-2 max-sm:px-[20px] max-md:px-[40px]">
+  <!-- Logo -->
+  <div class="w-[199px] h-[57px]">
+    <img src="logo.png" alt="Logo" class="w-full h-full" />
+  </div>
+
+  <!-- Hamburger Icon (Visible on small screens) -->
+  <div class="xl:hidden block">
+    <button id="menu-toggle" class="text-white focus:outline-none">
+      <!-- Hamburger Icon -->
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Nav Links -->
+  <div
+    id="nav-menu"
+    class="nav-menu xl:flex gap-[32px] open-sans text-[16px] leading-[28px] tracking-[4%] hidden flex-col xl:flex-row absolute xl:static top-[100%] left-0 w-full items-center   bg-black  xl:w-auto bg-black xl:bg-transparent px-[20px] xl:px-0 py-4 xl:py-0 z-50"
+  >
+    <h1 class="hover:font-bold hover:border cursor-pointer">HOME</h1>
+    <h1 class="hover:font-bold hover:border cursor-pointer">PAGES</h1>
+    <h1 class="hover:font-bold hover:border cursor-pointer">CONTACT US</h1>
+    <h1 class="hover:font-bold hover:border cursor-pointer">BLOG</h1>
+    <h1 class="hover:font-bold hover:border cursor-pointer">LANDING</h1>
+  </div>
+
+  <!-- Right Section -->
+  <div
+    class="open-sans font-semibold text-base leading-[28px] tracking-[5%] hidden xl:flex gap-6"
+  >
+    <h1 class="hover:font-bold hover:border cursor-pointer">
+      Login/Registration
+    </h1>
+    <div class="border border-white h-6"></div>
+    <h1 class="hover:font-bold hover:border cursor-pointer">Book Table</h1>
+  </div>
+</nav>
+
+
+
     <!-- nav end here -->
     <!-- main section  -->
-    <div class="main-section mt-[48px] mx-[310px] h-[736px] flex">
-      <div class="w-1/2 pr-[180px] my-auto cursor-pointer">
-        <p
-          class="font-bold text-[23px] leading-[29.9px] tracking-[4%] cursor-pointer"
-        >
+    <div class="main-section mt-12 mx-4 lg:mx-[80px] xl:mx-[310px] h-auto flex flex-col lg:flex-row">
+      <!-- Left Text Content -->
+      <div class="lg:w-1/2 lg:pr-[100px] my-auto cursor-pointer text-center lg:text-left">
+        <p class="font-bold text-[20px] md:text-[23px] leading-[30px] tracking-[4%]">
           Chase The New Flavour
         </p>
-        <img
-          src="Vector.svg"
-          alt=""
-          class="w-[40px] h-[9px] rotation-[-90deg]"
-        />
-        <h1
-          class="font-[Cormorant_Upright] font-bold text-[90px] leading-[117px] tracking-[4%] text-[#DCCA87]"
-        >
+    
+        <div class="flex justify-center lg:justify-start my-2">
+          <img src="Vector.svg" alt="" class="w-[40px] h-[9px] rotate-[-90deg]" />
+        </div>
+    
+        <h1 class="font-[Cormorant_Upright] font-bold text-[48px] md:text-[64px] lg:text-[90px] leading-tight tracking-[4%] text-[#DCCA87]">
           The Key To Fine Dining
         </h1>
-
-        <p
-          class="open-sans font-normal text-[16px] leading-[28px] tracking-[4%] text-balance my-[40px]"
-        >
+    
+        <p class="open-sans font-normal text-[16px] leading-[28px] tracking-[4%] my-6 text-balance">
           Sit tellus lobortis sed senectus vivamus molestie. Condimentum
           volutpat morbi facilisis quam scelerisque sapien. Et, penatibus
           aliquam amet tellus
         </p>
-        <button class="w-[157px] h-[44px] bg-[#DCCA87] px-[32px] py-[8px]">
-          <p
-            class="font-bold text-[16px] leading-[28px] tracking-[4%] text-black"
-          >
-            Explore Menu
-          </p>
-        </button>
+    
+        <div class="flex justify-center lg:justify-start">
+          <button class="w-[157px] h-[44px] bg-[#DCCA87] px-[32px] py-[8px]">
+            <p class="font-bold text-[16px] leading-[28px] tracking-[4%] text-black">
+              Explore Menu
+            </p>
+          </button>
+        </div>
       </div>
-      <div class="w-1/2 h-[736px]">
-        <img src="Hero img.png" alt="" />
+    
+      <!-- Right Image -->
+      <div class="lg:w-1/2 mt-8 lg:mt-0 h-auto">
+        <img src="Hero img.png" alt="Hero" class="w-full h-full object-cover" />
       </div>
     </div>
+    
 
     <!-- 2 portion -->
     <div
@@ -846,5 +836,15 @@
         </div>
       </div>
     </footer>
+    <!-- JavaScript for menu toggle -->
+<script>
+  const toggleBtn = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  toggleBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("hidden");
+    navMenu.classList.toggle("flex");
+  });
+</script>
   </body>
 </html>
